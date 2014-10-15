@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Responsive Parameters
+
+1. Over 1080px have four columns. They are, from left to right, nav, main, second, third
+
+2. Between 1080px and 720px have the nav as a horizontal bar across the top, under the masthead. Below the nav have three columns - main, second, third.
+
+3. Between 719px and 500px have the nav as a single horizontal bar across the top. Below nav show the main section as the whole width. Below the main section second and third columns will float and take up 50% the width.
+
+4. 499px and less have the nav bar be two rows with two links in each row. Then the main, second, and third sections will take up the full width and stack vertically.*/
+/*colors
+super highlight-#A9DAFF
+highlight-#79C5FF
+normal-#1097FF
+low light-#004F8B
+super lowlight-#003D6B
+*/
+*{
+	padding:0;
+	margin:0;
+    background-color: #000;
+}	
+body{
+	font-size: 62.5%;	
+  /** you can set this as 100% if you want **/
+	background-color: #000;
+}
+h1, h2, h3{
+	font-weight: 700;	
+	padding: 10px 20px;
+	color: #1097FF;
+    font-family: 'Lobster', cursive;
+}
+h1{
+	font-size: 3.6rem;
+    color: #555;
+    text-shadow: 0px 0px 30px #1097FF;
+    text-align: center;
+}
+
+h2{
+	font-size: 3.0rem;	
+    text-shadow: 0px 0px 30px #999;
+}
+h3{
+	font-size: 2.4rem;
+	color: #777;
+}
+p, li, a{
+	font-weight: 400;
+	font-family: sans-serif;
+	color: #1097FF;
+    font-family: 'Exo', sans-serif;
+}
+p{
+	padding: 10px 20px;
+	font-size: 1.4rem;
+}
+li{
+	font-size: 1.4rem;
+}
+ol li{
+	padding: 6px 20px;
+	list-style-position: inside;
+}
+a{
+	font-size: 1.4rem;
+}	
+
+/***********************************
+					Layout
+***********************************/
+.wrapper{
+	background-color: #000;	
+}
+.masthead{
+	
+}
+.nav{
+    margin: 0 auto;
+
+}
+.navbar{
+    margin: 0 auto;
+    float: none;
+}
+.main{
+	float: left;
+}
+/*.sidebar{
+    float: right;
+	
+}*/
+.footer{
+	clear: both;
+}
+/***********************************
+					Masthead
+***********************************/
+.masthead h1{
+	padding: 30px 20px;
+}
+
+/***********************************
+					Navigation
+***********************************/
+
+.navbar li{
+	float:left;	
+	/*width: 240px;  /* 960/4 = 240  works if the layout is 960*/
+	list-style:none;
+    margin: 0 auto;
+
+}
+.navbar a{
+	display: block;	
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+    color: #1097FF;
+	background-color: #003D6B;
+    border-radius: 0% 0% 0% 0%;
+    /*border: 1px solid black;*/
+}
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:active,
+.navbar a:focus{
+	background-color: #282828;
+    color: #1097FF;
+	transition: all 0.5s linear;
+    text-shadow: 0px 0px 10px #000;
+    font-weight: bold;
+
+}
+
+/***********************************
+					Content
+***********************************/
+.sidebar p{
+	font-size: 1.4rem;	
+}
+.main{
+    margin: 0 auto;
+    float: left;
+}
+.two{
+    float: left;
+}
+.three{
+    float: left;
+}
+@media all and (min-width: 1080px){
+   .nav{
+       width: 20%;
+       float: left;
+       clear: both;
+    }
+    .navbar li{
+        width: 100%;
+        padding: 0% 0% 0.5%;
+    }
+    .main{
+        width: 40%;
+    }
+    .two{
+        width: 20%;
+    }
+    .three{
+        width: 20%;
+
+    }
+}
+@media all and (
+max-width: 1080px) and (min-width: 720px){
+    .nav{
+        width: 100%;
+    }
+    .navbar li{
+        width: 25%;
+        
+    }
+    .main{
+        width: 50%;
+    }
+    .two{
+        width: 25%;
+    }
+    .three{
+        width: 25%;
+    }
+    h1{
+        text-align: center;
+    }
+}
+@media all and (
+max-width: 719px) and (min-width: 500px){
+    .nav{
+        width: 100%;
+    }
+    .navbar li{
+        width: 25%;
+    }
+    .two{
+        width: 50%;
+        float: left;
+    }
+    .three{
+        width: 50%;
+        float: right;
+    }
+    h1{
+        text-align: center;
+    }
+}
+@media all and (
+max-width: 499px){
+    .navbar li{
+        width: 49%;
+        padding: .5% .5%;
+        margin: 0 auto;
+    }
+    h1{
+        text-align: center;
+    }
+    }
+}
+.inst/*499px*/
+.instructions{
+	color: #C30;	
+}
+/***********************************
+					Footer
+***********************************/
+.footer p{
+	padding: 20px 20px;
+	font-size: 1.2rem;
+	color: #004F8B;	
+	background-color: #000;
+}
